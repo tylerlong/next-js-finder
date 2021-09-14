@@ -7,6 +7,9 @@ This project is mainly for learning purpose, it is not suitable for production.
 
 ## Notes
 
+
+### Next.js auto changed my `tsconfig.json` file
+
 ```
 We detected TypeScript in your project and reconfigured your tsconfig.json file for you. Strict-mode is set to false by default.
 
@@ -24,3 +27,10 @@ The following mandatory changes were made to your tsconfig.json:
     - isolatedModules was set to true (requirement for babel)
     - jsx was set to preserve (next.js implements its own optimized jsx transform)
 ```
+
+
+### Maybe you just need client side rendering
+
+There is no point for server side rendering if you don't care about SEO.
+
+Client side rendering + Rest API would be sufficient.
