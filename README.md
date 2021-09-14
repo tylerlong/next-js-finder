@@ -5,6 +5,13 @@ Create a macOS Finder like app using Next.js.
 This project is mainly for learning purpose, it is not suitable for production.
 
 
+
+## References
+
+- https://github.com/fastify/fastify-nextjs
+- https://nextjs.org/learn/basics/data-fetching/request-time
+
+
 ## Notes
 
 
@@ -29,8 +36,7 @@ The following mandatory changes were made to your tsconfig.json:
 ```
 
 
-### Maybe you just need client side rendering
+### There is no point for server side rendering if 
 
-There is no point for server side rendering if you don't care about SEO.
-
-Client side rendering + Rest API would be sufficient.
+- You don't care about SEO: traditional SPA app + Rest API is just fine.
+- Your website is purely static: then just pre-generate everything at build time.
