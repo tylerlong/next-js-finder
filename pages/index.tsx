@@ -1,7 +1,13 @@
 import React from 'react';
+import {GetServerSideProps} from 'next';
+
 import {fileNames} from '../src/utils';
 
-class Home extends React.Component<{fileNames: string[]}> {
+type Props = {
+  fileNames: string[];
+};
+
+class Home extends React.Component<Props> {
   render() {
     const {fileNames} = this.props;
     return (
@@ -16,7 +22,7 @@ class Home extends React.Component<{fileNames: string[]}> {
 
 export default Home;
 
-export const getServerSideProps = () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   return {
     props: {
       fileNames,
